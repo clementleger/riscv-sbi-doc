@@ -23,6 +23,7 @@ DEPS += src/ext-sys-suspend.adoc
 DEPS += src/ext-cppc.adoc
 DEPS += src/ext-nested-acceleration.adoc
 DEPS += src/ext-steal-time.adoc
+DEPS += src/ext-firmware-feature.adoc
 DEPS += src/ext-experimental.adoc
 DEPS += src/ext-vendor.adoc
 DEPS += src/ext-firmware.adoc
