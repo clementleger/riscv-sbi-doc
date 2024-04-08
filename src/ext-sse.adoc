@@ -202,7 +202,7 @@ event attributes.
 | RO
 | Entry argument (or parameter) value for handling the software event in
   supervisor software. This attribute value is passed to the supervisor
-  software via `A6` GPR. +
+  software via `A7` GPR. +
   +
   The reset value of this attribute is zero.
 
@@ -271,8 +271,8 @@ following:
   .. Set `INTERRUPTED_A6` event attribute = interrupted `A6` GPR value
   .. Set `INTERRUPTED_A7` event attribute = interrupted `A7` GPR value
 . Redirect execution to supervisor event handler
-  .. Set `A6` GPR = `ENTRY_ARG` event attribute value
-  .. Set `A7` GPR = Current Hart id
+  .. Set `A6` GPR = Current Hart id
+  .. Set `A7` GPR = `ENTRY_ARG` event attribute value
   .. Set `sepc` = Interrupted program counter value
   .. Set `sstatus.SPP` CSR bit = interrupted privilege mode
   .. Set `sstatus.SPIE` CSR bit = `sstatus.SIE` CSR bit value
