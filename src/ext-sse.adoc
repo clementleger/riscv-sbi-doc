@@ -210,7 +210,9 @@ event attributes.
 | 0x00000006
 | RW
 | Interrupted `sepc` CSR value which is saved before handling the software
-  event in supervisor software. +
+  event in supervisor software. This attribute can be updated only when the
+  software event is in `RUNNING` state. For global events, only the hart
+  executing the event handler can modify it. +
   +
   The reset value of this attribute is zero.
 
@@ -218,7 +220,10 @@ event attributes.
 | 0x00000007
 | RW
 | Interrupted flags which are saved before handling the software event in
-  supervisor software. The encoding of this event attribute is as follows: +
+  supervisor software. This attribute can be updated only when the
+  software event is in `RUNNING` state. For global events, only the hart
+  executing the event handler can modify it. The encoding of this event
+  attribute is as follows: +
   +
   `bit[0:0]`: interrupted `sstatus.SPP` CSR bit value +
   +
@@ -234,7 +239,9 @@ event attributes.
 | 0x00000008
 | RW
 | Interrupted `A6` GPR value which is saved before handling the software event
-  in supervisor software. +
+  in supervisor software. This attribute can be updated only when the software
+  event is in `RUNNING` state. For global events, only the hart executing the
+  event handler can modify it. +
   +
   The reset value of this attribute is zero.
 
@@ -242,7 +249,9 @@ event attributes.
 | 0x00000009
 | RW
 | Interrupted `A7` GPR value which is saved before handling the software event
-  in supervisor software. +
+  in supervisor software. This attribute can be updated only when the software
+  event is in `RUNNING` state. For global events, only the hart executing the
+  event handler can modify it. +
   +
   The reset value of this attribute is zero.
 
